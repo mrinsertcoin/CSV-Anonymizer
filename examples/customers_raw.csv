@@ -1,0 +1,5 @@
+customer_id,email,phone_number,zipcode,country,internal_notes
+1001,max.mustermann@example.com,+49 171 1234567,30167,DE,"VIP customer, call before shipment"
+1002,erika.muster@example.com,+49 160 7654321,50667,DE,"Asked for discount"
+1003,jane.doe@example.com,+1 555 9988776,90210,US,"Do not share externally"
+1004,linus.floyd@example.com,+49 152 44443333,10115,DE,"Contains sensitive comment"

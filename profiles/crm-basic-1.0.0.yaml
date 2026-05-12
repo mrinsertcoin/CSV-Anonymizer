@@ -1,0 +1,31 @@
+id: crm-basic
+version: 1.0.0
+name: CRM Basic Profile
+key_version: 1
+columns:
+  - name: customer_id
+    action: pseudonymize
+    prefix: CID_
+    length: 16
+  - name: email
+    action: pseudonymize
+    prefix: PID_
+    length: 16
+  - name: phone_number
+    action: mask
+    pattern: "****-****-####"
+  - name: zipcode
+    action: generalize
+    bins:
+      - { range: [0, 19999], label: "NORTH" }
+      - { range: [20000, 49999], label: "WEST" }
+      - { range: [50000, 79999], label: "SOUTH" }
+      - { range: [80000, 99999], label: "EAST" }
+  - name: internal_notes
+    action: drop
+  - name: country
+    action: keep
+defaults:
+  on_missing_column: warn
+  on_null: keep_null
+  delimiter: ","

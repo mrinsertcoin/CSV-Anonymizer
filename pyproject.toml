@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv-anonymizer"
+version = "0.1.0"
+description = "On-premise CSV anonymizer with profile-based pseudonymization, masking and audit logging."
+authors = [{ name = "Linus Floyd" }]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+  "pydantic>=2.6",
+  "typer>=0.12",
+  "PyYAML>=6.0",
+  "polars>=0.20",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+anonymize = "anonymizer.cli:app"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
