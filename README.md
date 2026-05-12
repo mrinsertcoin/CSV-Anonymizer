@@ -121,12 +121,7 @@ docker run --rm \
 
 Docker is only a packaging and deployment option. Data processing remains on-premise.
 
-## Security notes
 
-- Do not commit real key files.
-- Do not process real customer data in public demos.
-- Keep audit logs free of plaintext personal data.
-- Pseudonymized data may still count as personal data under GDPR if re-identification is possible with additional information.
 
 ## License
 
